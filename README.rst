@@ -9,7 +9,9 @@ At the moment it assumes that dictionaries are flat (values are primitives, not 
 example usage
 =============
 
-pip install pptable
+install::
+
+    pip install pptable
 
 
 code::
@@ -23,6 +25,24 @@ code::
 
     pptable(data)
 
+    ----------------------------------
+    region_id  name             slug
+    ----------------------------------
+            2  Amsterdam 1      ams1
+            3  San Francisco 1  sfo1
+            4  New York 2       nyc2
+            5  Amsterdam 2      ams2
+            6  Singapore 1      sgp1
+
+
     headers = ['slug', 'name']
     pptable(data, headers=headers)
 
+    -----------------------
+    slug  name
+    -----------------------
+    ams1  Amsterdam 1
+    sfo1  San Francisco 1
+    nyc2  New York 2
+    ams2  Amsterdam 2
+    sgp1  Singapore 1

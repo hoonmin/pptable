@@ -1,4 +1,4 @@
-from __future__ import print_func_function
+from __future__ import print_function
 
 
 def pptable(data, headers=None, print_func=print):
