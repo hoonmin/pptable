@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='pptable',
-    version='0.0.1',
+    version='0.0.2',
     url='http://github.com/munhitsu/pptable',
     license='MIT',
     author='Mateusz Lapsa-Malawski',
@@ -12,7 +12,6 @@ setup(
     description='pretty prints list of dictionaries as an ascii table',
     long_description=__doc__,
     packages=find_packages(),
-    namespace_packages=['pptable'],
     zip_safe=True,
     platforms='any',
     install_requires=[
