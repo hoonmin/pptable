@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='pptable',
-    version='0.0.2',
+    version='0.0.3',
     url='http://github.com/munhitsu/pptable',
     license='MIT',
     author='Mateusz Lapsa-Malawski',
