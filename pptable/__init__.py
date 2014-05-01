@@ -41,7 +41,7 @@ def pptable(data, headers=None, print_func=print):
 
     for line in data:
         keys.update(line.keys())
-        for key, value in line.iteritems():
+        for key, value in getattr(line, 'iteritems', line.items)():
             current_len = len("{}".format(value))
             update_dict_with_max(formatting, key, current_len)
 
