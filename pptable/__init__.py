@@ -7,16 +7,30 @@ def pptable(data, headers=None, print_func=print):
     if headers are provided then they specify sequence of columns
 
     example of data:
-    [{'slug': u'ams1', 'name': u'Amsterdam 1', 'region_id': 2},
-    {'slug': u'sfo1', 'name': u'San Francisco 1', 'region_id': 3},
-    {'slug': u'nyc2', 'name': u'New York 2', 'region_id': 4},
-    {'slug': u'ams2', 'name': u'Amsterdam 2', 'region_id': 5},
-    {'slug': u'sgp1', 'name': u'Singapore 1', 'region_id': 6}]
 
-    example of headers:
-    ['slug', 'name']
+    >>> data = [
+    ... {'slug': u'ams1', 'name': u'Amsterdam 1', 'region_id': 2},
+    ... {'slug': u'sfo1', 'name': u'San Francisco 1', 'region_id': 3},
+    ... {'slug': u'nyc2', 'name': u'New York 2', 'region_id': 4},
+    ... {'slug': u'ams2', 'name': u'Amsterdam 2', 'region_id': 5},
+    ... {'slug': u'sgp1', 'name': u'Singapore 1', 'region_id': 6}]
 
     example output:
+
+    >>> pptable(data)
+    ----------------------------------
+    region_id  name             slug
+    ----------------------------------
+            2  Amsterdam 1      ams1
+            3  San Francisco 1  sfo1
+            4  New York 2       nyc2
+            5  Amsterdam 2      ams2
+            6  Singapore 1      sgp1
+
+    example of headers:
+
+    >>> header = ['slug', 'name']
+    >>> pptable(data, header) #doctest: +NORMALIZE_WHITESPACE
     -----------------------
     slug  name
     -----------------------

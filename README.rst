@@ -1,3 +1,4 @@
+=======
 pptable
 =======
 
@@ -6,15 +7,18 @@ Prints data as a table assuming that data is a list of dictionaries
 At the moment it assumes that dictionaries are flat (values are primitives, not a dictionary/list)
 
 
-example usage
-=============
+installation
+============
 
-install::
+.. code:: sh
 
     pip install pptable
 
 
-code::
+example usage
+=============
+
+.. code:: python
 
     from pptable import pptable
     data = [{'slug': u'ams1', 'name': u'Amsterdam 1', 'region_id': 2},
@@ -25,6 +29,8 @@ code::
 
     pptable(data)
 
+It will output::
+
     ----------------------------------
     region_id  name             slug
     ----------------------------------
@@ -34,9 +40,14 @@ code::
             5  Amsterdam 2      ams2
             6  Singapore 1      sgp1
 
+You can choose header columns and the order, for example:
+
+.. code:: python
 
     headers = ['slug', 'name']
     pptable(data, headers=headers)
+
+The result is::
 
     -----------------------
     slug  name
