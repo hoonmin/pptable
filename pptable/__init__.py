@@ -66,7 +66,7 @@ def pptable(data, headers=None, print_func=print):
     if not headers:
         headers = keys
 
-    formatting_string = "  ".join(map(lambda header: "{{:{}}}".format(formatting[header]), headers))
+    formatting_string = "  ".join([ "{{{0}:{1}}}".format(i, formatting[header]) for i, header in enumerate(headers) ])
     line_len = sum([formatting[header] for header in headers]) + len(headers)*2
     print_func("-"*line_len)
     print_func(formatting_string.format(*headers))
